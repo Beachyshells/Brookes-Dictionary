@@ -1,0 +1,28 @@
+.Meanings {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.Meanings:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.partOfSpeech {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.definition {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.example {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
