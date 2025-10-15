@@ -7,7 +7,6 @@
 .left-side {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
 .icon {
@@ -15,7 +14,9 @@
 
   align-self: flex-end;
 }
-
+.Heading {
+  padding-right: 20px;
+}
 .Header {
   display: flex;
   align-items: center;
@@ -24,12 +25,8 @@
   box-shadow: 0 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
   border: 1px solid rgb(129, 126, 129);
-  padding: 0.5rem;
 }
 
-.spacer {
-  flex-grow: 1;
-}
 .Title {
   font-size: 2rem;
   font-weight: 700;
@@ -43,20 +40,29 @@
   color: #6c757d;
   margin: 0.5rem 0 0 0;
 }
-.left-side .Logo {
-  width: 150px;
-  height: 150px;
+.Logo {
+  width: 200px;
+  height: 200px;
 }
 
 @media (min-width: 992px) {
   .Logo {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
   }
   .Title {
     font-size: 3rem;
   }
   .sub-title {
     font-size: 1.25rem;
+  }
+  .header-search {
+    flex-grow: 1;
+    margin: 0 2rem;
+  }
+  .SearchBar {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
   }
 }

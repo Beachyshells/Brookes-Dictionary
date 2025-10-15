@@ -14,7 +14,7 @@ export default function Search(props) {
     <div className="Search">
       <form onSubmit={handleSubmit} className="Form">
         <input
-          placeholder="Search for a word"
+          placeholder="Search for a word..."
           type="search"
           className="SearchBar"
           autoFocus
