@@ -6,45 +6,6 @@
   border-radius: 0.5rem;
   margin: 2rem auto;
 }
-.App-header {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  border: 1px solid rgb(129, 126, 129);
-  padding: 0.5rem;
-}
-.App-header .Heading {
-  text-align: left;
-  margin-left: 1rem;
-}
-
-.spacer {
-  flex-grow: 1;
-}
-.Title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-}
-.sub-title {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #495057;
-  margin: 0;
-}
-.App .Logo {
-  width: 125px;
-  height: 125px;
-}
-
-.icon {
-  font-size: 2rem;
-
-  align-self: flex-end;
-}
 
 /*@keyframes App-logo-spin {
   from {

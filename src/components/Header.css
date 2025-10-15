@@ -10,16 +10,12 @@
   gap: 20px;
 }
 
-.Logo {
-  width: 125px;
-  height: 125px;
-}
-
 .icon {
   font-size: 2rem;
 
   align-self: flex-end;
 }
+
 .Header {
   display: flex;
   align-items: center;
@@ -35,22 +31,28 @@
   flex-grow: 1;
 }
 .Title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 0.9;
 }
 .sub-title {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: #495057;
-  margin: 0;
+  color: #6c757d;
+  margin: 0.5rem 0 0 0;
 }
-@media (max-width: 1028px) {
-  .Header {
-    flex-direction: column;
+.left-side .Logo {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 992px) {
+  .Logo {
+    width: 90px;
+    height: 90px;
   }
-}
-@media (min-width: 768) {
   .Title {
     font-size: 3rem;
   }
