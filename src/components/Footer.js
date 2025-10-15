@@ -10,7 +10,7 @@ export default function Footer() {
             Michelle Durham
           </a>{" "}
           is open sourced on{" "}
-          <a href="https://github.com/Beachyshells/code-synapse">GitHub</a>and
+          <a href="https://github.com/Beachyshells/code-synapse">GitHub</a> and
           hosted on <a href="https://codesynapse.netlify.app/">Netlify</a>
         </div>
       </footer>
