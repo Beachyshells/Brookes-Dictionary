@@ -4,6 +4,9 @@ import "./Meanings.css";
 
 export default function Meanings(props) {
   console.log(props.meaning);
+  if (!props.meaning) {
+    return null;
+  }
 
   return (
     <div className="Meanings p-3">

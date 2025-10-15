@@ -1,29 +1,32 @@
+import React, { useState } from "react";
 import "./App.css";
-import Dictionary from "./components/Dictionary";
-import StudyList from "./components/StudyList";
-import logo from "./images/CodeSynapseLogo.png";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+
+import axios from "axios";
 
 function App() {
+  const [results, setResults] = useState({});
+
+  function handleResponse(response) {
+    console.log(response.data);
+    setResults(response.data);
+  }
+  function search(keyword) {
+    // documentation:https://www.shecodes.io/learn/apis/dictionary
+    let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   return (
     // Header Hero
     <div className="App   ">
       <div className="container ">
-        <div className=" App-header">
-          <img className="Logo" alt="CodeSynapse Logo" src={logo} />
-          <div className="Heading">
-            <header className="Title">Code Synapse</header>
-            <p className="sub-title">Your Intelligent Developer Dictionary</p>
-          </div>
-          <div className="spacer"></div>
-          <div className="icon">
-            <p>📒</p>
-          </div>
-        </div>
-
-        <main>
-          <Dictionary />
-          <StudyList />
-        </main>
+        <Header onSearch={search} />
+        <Body results={results} />
+        <Footer />
       </div>
     </div>
   );

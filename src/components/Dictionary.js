@@ -1,40 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import StudyList from "./StudyList";
 import Results from "./Results";
-import axios from "axios";
 import "./dictionary.css";
-export default function Dictionary() {
-  let [keyWord, setKeyWord] = useState("");
-  let [results, setResults] = useState(null);
 
-  function handleKeyWordChange(event) {
-    setKeyWord(event.target.value);
-  }
-
-  function Search(event) {
-    event.preventDefault();
-
-    // documentation:https://www.shecodes.io/learn/apis/dictionary
-    let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
-  }
-
-  function handleResponse(response) {
-    console.log(response.data);
-    setResults(response.data);
-  }
-
+export default function Dictionary(props) {
   return (
     <div className="Dictionary">
-      <form onSubmit={Search} className="Form">
-        <input
-          type="search"
-          className="SearchBar"
-          autoFocus
-          onChange={handleKeyWordChange}
-        />
-      </form>
-      <Results results={results} />
+      <div className="row gap-5">
+        <div className="col-4">
+          <StudyList />
+        </div>
+        <div className="col-6">
+          {" "}
+          <Results results={props.results} />
+        </div>{" "}
+      </div>
     </div>
   );
 }
