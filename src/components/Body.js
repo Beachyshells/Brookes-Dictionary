@@ -5,7 +5,11 @@ import "./Body.css";
 export default function Body(props) {
   return (
     <div className="Body">
-      <Dictionary results={props.results} />
+      <Dictionary
+        results={props.results}
+        studyList={props.studyList}
+        onSave={props.onSave}
+      />
     </div>
   );
 }
