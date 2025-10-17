@@ -1,10 +1,9 @@
 import React from "react";
 import Meanings from "./Meanings";
-import Phonetics from "./Phonetics";
+import Phonetics from "./Phonetics"; // Make sure this matches your filename
 import "./Results.css";
 
 export default function Results(props) {
-  console.log("Props being received by Results.js:", props);
   const mockPhonetic = {
     text: "/hə'ləʊ/",
     audio:
@@ -31,21 +30,15 @@ export default function Results(props) {
             >
               ☑️
             </button>
-            <div className="Spacer"></div>
-            <button
-              className="collection-toggle-button"
-              onClick={() => {
-                console.log(
-                  "The toggleCollection prop is:",
-                  props.toggleCollection
-                );
-
-                props.toggleCollection();
-              }}
-              title="Show my word collection"
-            >
-              ⭐
-            </button>
+            <div className="saved-words">
+              <button
+                className="collection-toggle-button save-button"
+                onClick={props.toggleCollection}
+                title="Show my word collection"
+              >
+                ⭐
+              </button>
+            </div>
           </div>
         </div>
       </div>

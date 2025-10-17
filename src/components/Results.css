@@ -14,21 +14,26 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.save-button {
-  background: none;
+.Results .save-button,
+.Results .collection-toggle-button {
   border: none;
-  font-size: 2rem;
+  border-radius: 50%; /* Makes them circular */
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
   transition: all 150ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .save-button:hover {
   transform: scale(1.2);
-  cursor: pointer;
 }
 .Spacer {
   flex-grow: 1;
 }
-.collection-toggle-button {
-  font-size: 30px;
-  border: none;
-  background: none;
+
+.my-saved-words {
+  font-size: 14px;
 }

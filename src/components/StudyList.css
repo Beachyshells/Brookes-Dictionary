@@ -1,106 +1,30 @@
 .StudyList {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  z-index: 200;
-}
-.StudyList .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 300ms ease-in-out;
-}
-.StudyList .panel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 90%;
-  max-width: 400px;
-  height: 100%;
   background: white;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform 300ms ease-in-out;
-}
-.StudyList.visible {
-  visibility: visible;
-}
-.StudyList.visible .overlay {
-  opacity: 1;
-}
-.StudyList.visible .panel {
-  /* ...it slides back into view */
-  transform: translateX(0);
-}
-
-.StudyList .close-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #aaa;
-}
-.StudyList .close-button:hover {
-  color: #333;
-}
-
-.StudyList.empty {
-  background-color: white;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
 }
-.StudyList.empty::before {
-  content: "📖";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 10rem;
-  color: #f0f0f0;
-  z-index: 1;
+
+.StudyList h2 {
+  font-family: "Grandstander";
+
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
-.StudyList .empty-content {
-  position: relative;
-  z-index: 2;
-}
-.StudyList .big-icon {
-  font-size: 3rem;
-  margin: 10px 0;
-  opacity: 0.5;
-}
-.StudyList p {
-  font-size: 0.9rem;
-  font-weight: bold;
+
+.saved-word-item {
+  display: flex;
 }
 .star-list {
-  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgb(113, 110, 114);
 }
-
-.star-list li::before {
-  display: flex;
+.saved-word-item::before {
   content: "★";
-  color: gold;
-  margin-right: 8px;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.saved-words {
-  display: flex;
+  color: var(--accent-color);
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
