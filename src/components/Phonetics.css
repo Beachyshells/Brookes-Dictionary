@@ -1,0 +1,12 @@
+.phonetic-text {
+  font-size: 1.3rem;
+  opacity: 0.6;
+  color: var(--accent-color);
+}
+.audio-button {
+  background: none;
+  border: none;
+  font-size: 25px;
+  display: flex;
+  margin: 0 auto;
+}

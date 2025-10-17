@@ -10,16 +10,16 @@
 .SearchBar {
   width: 100%;
   align-items: center;
-  padding: 5px;
-  border: 2px solid #b375e9;
+  padding: 12px 15px;
+  border: 1px solid var(--secondary-color);
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   border-radius: 0.5rem;
 }
 
 .SearchBar:focus {
   outline: none;
-  border-color: #6d09c5;
-  box-shadow: 0 0 5px 4px rgba(155, 89, 182, 0.25);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(255, 202, 212, 0.5);
 }
 @media (max-width: 900px) {
   .Search {
@@ -27,5 +27,16 @@
     margin-top: 20px;
     order: 1;
     margin: 20px 0;
+  }
+}
+@media (min-width: 992) {
+  .header-search {
+    flex-grow: 1;
+    margin: 0 2rem;
+  }
+  .SearchBar {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
   }
 }

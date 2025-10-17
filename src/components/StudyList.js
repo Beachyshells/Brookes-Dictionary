@@ -21,7 +21,11 @@ export default function StudyList(props) {
           props.list.map(function (savedWord, index) {
             return (
               <div key={index}>
-                <SavedWords data={savedWord} />
+                <ul className="star-list">
+                  <li className="saved-words">
+                    <SavedWords data={savedWord} />
+                  </li>
+                </ul>
               </div>
             );
           })}

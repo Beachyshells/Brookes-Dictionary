@@ -1,19 +1,26 @@
 import React from "react";
-import logo from "../images/CodeSynapseLogo.png";
 import Search from "./Search";
 import "./Header.css";
 
 export default function Header(props) {
   return (
-    <div className="Header App-header p-3 mb-4 d-block d-lg-flex  align-items-lg-center ">
-      <div className="left-side d-flex align-items-center justify-content-center">
-        <img className="Logo" alt="CodeSynapse Logo" src={logo} />
-        <div className="Heading">
-          <header className="Title">Code Synapse</header>
-          <p className="sub-title">Your Intelligent Developer Dictionary</p>
-        </div>
+    <div className="Header text-center ">
+      <div className="Heading">
+        <header className="Title">
+          <span className="letter-D">D</span>
+          <span className="letter-i">i</span>
+          <span className="letter-c">c</span>
+          <span className="letter-t">t</span>
+          <span className="letter-i2">i</span>
+          <span className="letter-o">o</span>
+          <span className="letter-n">n</span>
+          <span className="letter-a">a</span>
+          <span className="letter-r">r</span>
+          <span className="letter-y">y</span>
+        </header>
+        <p className="sub-title">Let's learn a new word! 📖</p>
       </div>
-      <div className="mt-3 mt-lg-0 d-flex justify-content-center">
+      <div className="SearchContainer d-flex justify-content-center">
         <Search onSearch={props.onSearch} />
       </div>
     </div>

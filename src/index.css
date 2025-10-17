@@ -1,8 +1,14 @@
 :root {
   --background-color: #fff9f5;
+  --text-color: #4a4a4a;
+  --primary-color: #8860d0;
+  --secondary-color: #c1c8e4;
+  --accent-color: #f8a1b1;
 }
 
 body {
   margin: 0;
   background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Lora", serif;
 }

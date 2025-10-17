@@ -1,49 +1,49 @@
-.right-side {
-  display: flex;
-  justify-items: space-around;
-  align-items: center;
-  gap: 15px;
-}
-.left-side {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  font-size: 2rem;
-
-  align-self: flex-end;
-}
-.Heading {
-  padding-right: 20px;
-}
 .Header {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  border: 1px solid rgb(129, 126, 129);
+  text-align: center;
 }
 
-.Title {
-  font-size: 2rem;
-  font-weight: 700;
+.Header .Title {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
   margin: 0;
-  margin-bottom: 15px;
-  line-height: 0.9;
 }
-.sub-title {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #6c757d;
-  margin: 0.5rem 0 0 0;
+.Header .sub-title {
+  font-size: 1rem;
+  margin-top: 5px;
+  opacity: 0.7;
 }
-.Logo {
-  width: 200px;
-  height: 200px;
-}
+
+.Title .letter-D {
+  color: #8860d0;
+} /* Purple */
+.Title .letter-i {
+  color: #ffcad4;
+} /* Pink */
+.Title .letter-c {
+  color: #f4a261;
+} /* Orange */
+.Title .letter-t {
+  color: #2a9d8f;
+} /* Teal */
+.Title .letter-i2 {
+  color: #8860d0;
+} /* Purple */
+.Title .letter-o {
+  color: #ffcad4;
+} /* Pink */
+.Title .letter-n {
+  color: #f4a261;
+} /* Orange */
+.Title .letter-a {
+  color: #2a9d8f;
+} /* Teal */
+.Title .letter-r {
+  color: #8860d0;
+} /* Purple */
+.Title .letter-y {
+  color: #ffcad4;
+} /* Pink */
 
 @media (min-width: 992px) {
   .Logo {
@@ -55,14 +55,5 @@
   }
   .sub-title {
     font-size: 1.25rem;
-  }
-  .header-search {
-    flex-grow: 1;
-    margin: 0 2rem;
-  }
-  .SearchBar {
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
   }
 }

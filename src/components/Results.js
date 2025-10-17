@@ -21,8 +21,8 @@ export default function Results(props) {
           <Phonetics phonetic={mockPhonetic} />
         </div>
 
-        <div className="col-10">
-          <div className="word-header d-flex align-items-center gap-3">
+        <div className="col">
+          <div className="word-header d-flex align-items-center">
             <h2 className="word">{props.results.word}</h2>
             <button
               className="save-button"
@@ -37,7 +37,7 @@ export default function Results(props) {
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div key={index}>
-            <Meanings meaning={meaning} />
+            <Meanings meaning={meaning} isFirst={index === 0} />
           </div>
         );
       })}
