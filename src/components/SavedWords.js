@@ -4,7 +4,6 @@ export default function SavedWords(props) {
   return (
     <div className="SavedWords">
       <h3>{props.data.word}</h3>
-      <div className="phonetic">{props.data.phonetic}</div>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.GoldStarButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 150ms ease-in-out;
+}
+
+.GoldStarButton:hover {
+  transform: scale(1.1);
+}
+.GoldStarButton .prompt {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  right: 0;
+  width: 200px;
+  background-color: #4a4a4a;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.9rem;
+  transition: opacity 150ms ease-in-out;
+}
+.GoldStarButton:hover .prompt {
+  visibility: visible;
+  opacity: 1;
+}

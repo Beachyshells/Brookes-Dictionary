@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="Footer text-align-center">
+    <div className="Footer d-flex justify-content-center mt-3">
       <footer>
         <div>
           This project was coded by 🐞

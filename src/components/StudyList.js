@@ -12,7 +12,7 @@ export default function StudyList(props) {
     return (
       <div className="StudyList">
         <h2>
-          My Study List
+          My Word Collection
           <span onClick={toggleList} className="icon">
             📒
           </span>
@@ -33,9 +33,12 @@ export default function StudyList(props) {
     );
   } else {
     return (
-      <div className="StudyList">
-        <h2>My Study List</h2>
-        <p className="placeholder-text">Your saved words will appear here</p>
+      <div className="StudyList empty">
+        <div className="empty-content">
+          <h2>My Word Collection</h2>
+          <div className="big-icon">📒</div>
+          <p className="placeholder-text">Your saved words will appear here</p>
+        </div>
       </div>
     );
   }

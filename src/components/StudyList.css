@@ -9,15 +9,49 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
+.StudyList.empty {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.StudyList.empty::before {
+  content: "📖";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  color: #f0f0f0;
+  z-index: 1;
+}
+.StudyList .empty-content {
+  position: relative;
+  z-index: 2;
+}
+.StudyList .big-icon {
+  font-size: 3rem;
+  margin: 10px 0;
+  opacity: 0.5;
+}
+.StudyList p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 .star-list {
   list-style-type: none;
 }
 
 .star-list li::before {
+  display: flex;
   content: "★";
   color: gold;
   margin-right: 8px;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .saved-words {

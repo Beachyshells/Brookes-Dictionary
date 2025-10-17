@@ -3,18 +3,20 @@ import "./App.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import GoldStarButton from "./components/GoldStarButton";
+import StudyList from "./components/StudyList";
 
 import axios from "axios";
 
 function App() {
   const [results, setResults] = useState({});
   const [studyList, setStudyList] = useState([]);
+  const [isCollectionVisible, setIsCollectionVisible] = useState(false);
 
+  function toggleCollection() {
+    setIsCollectionVisible(!isCollectionVisible);
+  }
   function handleResponse(response) {
-    console.log(
-      "✅ CHECKPOINT 4: handleResponse was called with:",
-      response.data
-    );
     setResults(response.data);
   }
   const addToStudyList = () => {
@@ -28,11 +30,9 @@ function App() {
     }
   };
   function search(keyword) {
-    // documentation:https://api.shecodes
-    console.log(`✅ CHECKPOINT 1: Search function started for "${keyword}"`);
+    // documentation:https://api.shecodes.io/dictionary
     let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
-    console.log("✅ CHECKPOINT 2: Making API call to:", apiUrl);
     axios
       .get(apiUrl)
       .then(handleResponse)
@@ -50,6 +50,12 @@ function App() {
       <div className="container ">
         <Header onSearch={search} />
         <Body results={results} onSave={addToStudyList} studyList={studyList} />
+        <GoldStarButton onClick={toggleCollection} />
+        <StudyList
+          list={studyList}
+          isVisible={isCollectionVisible}
+          onClose={toggleCollection}
+        />{" "}
         <Footer />
       </div>
     </div>
