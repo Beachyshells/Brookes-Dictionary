@@ -10,7 +10,7 @@ import axios from "axios";
 function App() {
   const [results, setResults] = useState({});
   const [studyList, setStudyList] = useState([]);
-  const [isCollectionVisible, setIsCollectionVisible] = useState(true);
+  const [isCollectionVisible, setIsCollectionVisible] = useState(false);
 
   function toggleCollection() {
     setIsCollectionVisible(!isCollectionVisible);
