@@ -22,6 +22,7 @@ function App() {
     const newWord = results;
     if (newWord.word && !studyList.some((item) => item.word === newWord.word)) {
       setStudyList((currentList) => [...currentList, newWord]);
+      alert(`You have added ${newWord.word} to your collection!`);
     } else if (newWord.word) {
       alert(`This word is already in your study list!`);
     }
