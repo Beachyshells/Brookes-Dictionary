@@ -1,4 +1,8 @@
+:root {
+  --background-color: #fff9f5;
+}
+
 body {
   margin: 0;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
 }

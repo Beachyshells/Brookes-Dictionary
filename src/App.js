@@ -11,7 +11,10 @@ function App() {
   const [studyList, setStudyList] = useState([]);
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(
+      "✅ CHECKPOINT 4: handleResponse was called with:",
+      response.data
+    );
     setResults(response.data);
   }
   const addToStudyList = () => {
@@ -25,10 +28,20 @@ function App() {
     }
   };
   function search(keyword) {
-    // documentation:https://www.shecodes.io/learn/apis/dictionary
+    // documentation:https://api.shecodes
+    console.log(`✅ CHECKPOINT 1: Search function started for "${keyword}"`);
     let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
+    console.log("✅ CHECKPOINT 2: Making API call to:", apiUrl);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch(function (error) {
+        console.error("❌ CHECKPOINT 3: API call FAILED. Error:", error);
+        alert(
+          "Sorry we could not find a definition for that word. Please try again or try another word."
+        );
+      });
   }
 
   return (
