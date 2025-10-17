@@ -24,3 +24,11 @@
   transform: scale(1.2);
   cursor: pointer;
 }
+.Spacer {
+  flex-grow: 1;
+}
+.collection-toggle-button {
+  font-size: 30px;
+  border: none;
+  background: none;
+}

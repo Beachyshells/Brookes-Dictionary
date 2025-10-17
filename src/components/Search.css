@@ -10,16 +10,16 @@
 .SearchBar {
   width: 100%;
   align-items: center;
-  padding: 12px 15px;
-  border: 1px solid var(--secondary-color);
+  padding: 10px 15px;
+  border: 2px solid var(--secondary-color);
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   border-radius: 0.5rem;
 }
 
 .SearchBar:focus {
   outline: none;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 4px rgba(255, 202, 212, 0.5);
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 0.25px 0.55rem rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 900px) {
   .Search {

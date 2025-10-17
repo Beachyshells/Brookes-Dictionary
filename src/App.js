@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import GoldStarButton from "./components/GoldStarButton";
 import StudyList from "./components/StudyList";
 
 import axios from "axios";
@@ -11,7 +10,7 @@ import axios from "axios";
 function App() {
   const [results, setResults] = useState({});
   const [studyList, setStudyList] = useState([]);
-  const [isCollectionVisible, setIsCollectionVisible] = useState(false);
+  const [isCollectionVisible, setIsCollectionVisible] = useState(true);
 
   function toggleCollection() {
     setIsCollectionVisible(!isCollectionVisible);
@@ -45,19 +44,25 @@ function App() {
   }
 
   return (
-    // Header Hero
-    <div className="App   ">
-      <div className="container ">
+    <div className="App">
+      <div className="container">
         <Header onSearch={search} />
-        <Body results={results} onSave={addToStudyList} studyList={studyList} />
-        <GoldStarButton onClick={toggleCollection} />
-        <StudyList
-          list={studyList}
-          isVisible={isCollectionVisible}
-          onClose={toggleCollection}
-        />{" "}
+        <Body
+          results={results}
+          onSave={addToStudyList}
+          toggleCollection={toggleCollection}
+        />
+        {isCollectionVisible && (
+          <StudyList
+            list={studyList}
+            isVisible={isCollectionVisible}
+            onClose={toggleCollection}
+          />
+        )}
+
         <Footer />
-      </div>
+      </div>{" "}
+      {isCollectionVisible && <StudyList list={studyList} />}
     </div>
   );
 }

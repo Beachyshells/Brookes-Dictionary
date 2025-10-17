@@ -18,7 +18,7 @@ export default function Header(props) {
           <span className="letter-r">r</span>
           <span className="letter-y">y</span>
         </header>
-        <p className="sub-title">Let's learn a new word! 📖</p>
+        <p className="sub-title">Let's learn a new word! </p>
       </div>
       <div className="SearchContainer d-flex justify-content-center">
         <Search onSearch={props.onSearch} />

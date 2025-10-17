@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./StudyList.css";
 import SavedWords from "./SavedWords";
 
 export default function StudyList(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const classes = `StudyList ${props.isVisible ? "visible" : ""}`;
 
-  function toggleList() {
-    setIsOpen(!isOpen);
-  }
-  if (props.list && props.list.length > 0) {
-    return (
-      <div className="StudyList">
-        <h2>
-          My Word Collection
-          <span onClick={toggleList} className="icon">
-            📒
-          </span>
-        </h2>
-        {isOpen &&
+  return (
+    <div className={classes}>
+      <div className="overlay" onClick={props.onClose}></div>
+      <div className="panel">
+        <button className="close-button" onClick={props.onClose}>
+          {" "}
+          📒
+        </button>
+        <h2>My Word Collection</h2>
+        {props.list && props.list.length > 0 ? (
           props.list.map(function (savedWord, index) {
             return (
               <div key={index}>
@@ -28,18 +25,13 @@ export default function StudyList(props) {
                 </ul>
               </div>
             );
-          })}
+          })
+        ) : (
+          <div className="empty-state">
+            <p>Your saved words will appear here!</p>
+          </div>
+        )}
       </div>
-    );
-  } else {
-    return (
-      <div className="StudyList empty">
-        <div className="empty-content">
-          <h2>My Word Collection</h2>
-          <div className="big-icon">📒</div>
-          <p className="placeholder-text">Your saved words will appear here</p>
-        </div>
-      </div>
-    );
-  }
+    </div>
+  );
 }
