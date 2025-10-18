@@ -7,16 +7,23 @@ export default function Header(props) {
     <div className="Header text-center ">
       <div className="Heading">
         <header className="Title">
-          <span className="letter-D">D</span>
-          <span className="letter-i">i</span>
-          <span className="letter-c">c</span>
-          <span className="letter-t">t</span>
-          <span className="letter-i2">i</span>
-          <span className="letter-o">o</span>
-          <span className="letter-n">n</span>
-          <span className="letter-a">a</span>
-          <span className="letter-r">r</span>
-          <span className="letter-y">y</span>
+          <span className="purple">B</span>
+          <span className="pink">r</span>
+          <span className="orange">o</span>
+          <span className="teal">o</span>
+          <span className="purple">k</span>
+          <span className="pink">e</span>
+          <span className="orange">'</span>
+          <span className="teal">s</span> <span className="purple">D</span>
+          <span className="pink">i</span>
+          <span className="orange">c</span>
+          <span className="teal">t</span>
+          <span className="purple">i</span>
+          <span className="pink">o</span>
+          <span className="orange">n</span>
+          <span className="teal">a</span>
+          <span className="purple">r</span>
+          <span className="pink">y</span>
         </header>
         <p className="sub-title">Let's learn a new word! </p>
       </div>

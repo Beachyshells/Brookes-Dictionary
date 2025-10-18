@@ -10,7 +10,8 @@
 .Synonyms li {
   font-size: 0.9rem;
   font-weight: 500;
-  background-color: #f2f2f2;
+  background-color: var(--accent-color);
+
   padding: 8px 16px;
   border-radius: 20px;
   transition: all 150ms ease-in-out;
@@ -19,4 +20,7 @@
 .Synonyms li:hover {
   background-color: #e6e6e6;
   cursor: pointer;
+}
+.empty-state p {
+  font-family: "Grandstander", cursive;
 }

@@ -1,6 +1,6 @@
 .phonetic-text {
   font-size: 1.3rem;
-  opacity: 0.6;
+  font-weight: 600;
   color: var(--accent-color);
 }
 .audio-button {

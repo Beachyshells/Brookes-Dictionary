@@ -16,36 +16,18 @@
   opacity: 0.7;
 }
 
-.Title .letter-D {
+.Title .purple {
   color: #8860d0;
 } /* Purple */
-.Title .letter-i {
-  color: #ffcad4;
+.Title .pink {
+  color: #f56d86;
 } /* Pink */
-.Title .letter-c {
+.Title .orange {
   color: #f4a261;
 } /* Orange */
-.Title .letter-t {
+.Title .teal {
   color: #2a9d8f;
 } /* Teal */
-.Title .letter-i2 {
-  color: #8860d0;
-} /* Purple */
-.Title .letter-o {
-  color: #ffcad4;
-} /* Pink */
-.Title .letter-n {
-  color: #f4a261;
-} /* Orange */
-.Title .letter-a {
-  color: #2a9d8f;
-} /* Teal */
-.Title .letter-r {
-  color: #8860d0;
-} /* Purple */
-.Title .letter-y {
-  color: #ffcad4;
-} /* Pink */
 
 @media (min-width: 992px) {
   .Title {

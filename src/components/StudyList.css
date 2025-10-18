@@ -8,10 +8,26 @@
 
 .StudyList h2 {
   font-family: "Grandstander";
-
   color: var(--primary-color);
   margin-bottom: 20px;
 }
+
+.empty-state p {
+  font-family: "Grandstander", cursive;
+}
+
+.purple {
+  color: #8860d0;
+} /* Purple */
+.pink {
+  color: #f56d86;
+} /* Pink */
+.orange {
+  color: #f4a261;
+} /* Orange */
+.teal {
+  color: #2a9d8f;
+} /* Teal */
 
 .saved-word-item {
   display: flex;
