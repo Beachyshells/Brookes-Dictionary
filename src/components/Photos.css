@@ -1,0 +1,39 @@
+.Photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--primary-color);
+}
+
+.Polaroid {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+
+  box-shadow: inset0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  cursor: pointer;
+  max-width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Polaroid:hover {
+  transform: rotate(4deg) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.Polaroid .caption {
+  text-align: center;
+  margin-top: 5px;
+  transform: rotate(-6deg);
+  font-size: 34px;
+  color: #555;
+  font-family: var(--picture-font);
+  letter-spacing: 2.5px;
+  line-height: 1.2;
+}
+.Polaroid .caption-hint {
+  font-size: 13px;
+  opacity: 0.7;
+  font-style: italic;
+}

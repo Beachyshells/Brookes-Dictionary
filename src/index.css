@@ -4,10 +4,16 @@
   --primary-color: #8860d0;
   --secondary-color: #d2daf8;
   --accent-color: #f69eae;
+  --picture-font: "Kalam", cursive;
 }
 
 body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+.kalam-bold {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
 }
