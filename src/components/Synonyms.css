@@ -16,7 +16,7 @@
   transition: all 150ms ease-in-out;
   color: var(--primary-color);
   margin-right: 10px;
-  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .Synonyms li:hover {

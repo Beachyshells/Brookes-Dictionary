@@ -1,7 +1,7 @@
 .word {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 2.8rem;
+
   color: var(--primary-color);
   margin: 0;
 }

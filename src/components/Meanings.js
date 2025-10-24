@@ -10,7 +10,7 @@ export default function Meanings(props) {
   return (
     <div className={containerClasses}>
       <div className="highlight">
-        <h3 className="partOfSpeech">{props.meaning.partOfSpeech}</h3>
+        <h3 className="partOfSpeech fs-5">{props.meaning.partOfSpeech}</h3>
 
         <div className="definition">{props.meaning.definition}</div>
         <div className="example">

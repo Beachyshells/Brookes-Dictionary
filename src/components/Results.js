@@ -23,7 +23,7 @@ export default function Results(props) {
         </div>
         <div className="col">
           <div className="word-header d-flex align-items-center gap-3">
-            <h2 className="word">{props.results.word}</h2>
+            <h2 className="word fs-2">{props.results.word}</h2>
             <button
               className="save-button"
               onClick={props.onSave}
@@ -47,11 +47,7 @@ export default function Results(props) {
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div>
-            <Meanings
-              meaning={meaning}
-              isFirst={index === 0}
-              word={props.results.word}
-            />
+            <Meanings meaning={meaning} isFirst={index === 0} />
           </div>
         );
       })}
