@@ -1,10 +1,20 @@
 .word {
-  font-family: "Poppins", sans-serif;
+  font-family: "Libertinus Serif", serif;
   font-weight: 600;
   color: var(--primary-color);
   margin: 0;
 }
-
+div.btn {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  justify-content: left;
+  color: var(--primary-color);
+}
+div.btn:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
 .Results {
   background: white;
   padding: 30px;
@@ -17,21 +27,35 @@
 .Results .save-button,
 .Results .collection-toggle-button {
   border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  background-color: transparent;
   transition: all 150ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.buttons {
+  margin-left: 3rem;
+}
 .save-button:hover {
   transform: scale(1.2);
 }
-.Spacer {
+.spacer {
   flex-grow: 1;
 }
 
 .my-saved-words {
   font-size: 0.9rem;
+}
+.btns {
+  border: 3px solid var(--primary-color);
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  background-color: #fff5f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.btns:hover {
+  background-color: #ffe3ec;
 }

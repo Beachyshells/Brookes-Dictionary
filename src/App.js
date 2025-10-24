@@ -61,6 +61,7 @@ function App() {
         <Header onSearch={search} />
 
         <Body
+          onSearch={search}
           results={results}
           onSave={addToStudyList}
           toggleCollection={toggleCollection}

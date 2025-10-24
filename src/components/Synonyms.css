@@ -14,7 +14,6 @@
   padding: 8px 16px;
   border-radius: 20px;
   transition: all 150ms ease-in-out;
-  color: var(--primary-color);
   margin-right: 10px;
   cursor: pointer;
 }
@@ -25,4 +24,8 @@
 }
 .empty-state p {
   font-family: "Grandstander", cursive;
+}
+.links {
+  color: var(--primary-color);
+  text-decoration: none;
 }

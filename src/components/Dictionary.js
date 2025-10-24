@@ -7,7 +7,7 @@ export default function Dictionary(props) {
   return (
     <div className="Dictionary">
       <Results
-        word={props.results.word}
+        onSearch={props.onSearch}
         photos={props.photos}
         results={props.results}
         onSave={props.onSave}

@@ -12,6 +12,7 @@ export default function Body(props) {
       <div className="Body">
         <Photos word={props.results.word} photos={props.photos} />
         <Dictionary
+          onSearch={props.onSearch}
           photos={props.photos}
           results={props.results}
           onSave={props.onSave}

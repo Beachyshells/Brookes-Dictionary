@@ -21,28 +21,32 @@ export default function Results(props) {
         <div className="col-auto">
           <Phonetics phonetic={mockPhonetic} />
         </div>
+
         <div className="col">
           <div className="word-header d-flex align-items-center gap-3">
             <h2 className="word fs-2">{props.results.word}</h2>
-
-            <div>
-              <button
-                className="save-button"
-                onClick={props.onSave}
-                title="Save to study page"
-              >
-                ☑️
-              </button>
-            </div>
-
-            <div className="saved-words">
-              <button
-                className="collection-toggle-button save-button"
-                onClick={props.toggleCollection}
-                title="Show my word collection"
-              >
-                ⭐
-              </button>
+            <div className="spacer"> {""}</div>
+            <div className="buttons d-flex flex-column gap-2">
+              <div className="btns d-flex flex-row align-items-center">
+                <button
+                  className="save-button"
+                  onClick={props.onSave}
+                  title="Save to study page"
+                >
+                  ☑️
+                </button>
+                <div className="btn">Save word</div>
+              </div>
+              <div className="btns my-saved-words d-flex flex-row align-items-center">
+                <button
+                  className="collection-toggle-button save-button"
+                  onClick={props.toggleCollection}
+                  title="Show my word collection"
+                >
+                  ⭐
+                </button>
+                <div className="btn">Study list</div>
+              </div>{" "}
             </div>
           </div>
         </div>
@@ -51,7 +55,11 @@ export default function Results(props) {
       {props.results.meanings.map(function (meaning, index) {
         return (
           <div>
-            <Meanings meaning={meaning} isFirst={index === 0} />
+            <Meanings
+              onSearch={props.onSearch}
+              meaning={meaning}
+              isFirst={index === 0}
+            />
           </div>
         );
       })}
