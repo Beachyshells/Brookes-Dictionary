@@ -23,7 +23,7 @@ export default function Photos(props) {
           />
           <div className="caption">
             <div>{props.word}</div>
-            <div className="caption-hint">(Click to see next)</div>
+            <div className="caption-hint">(Click to see next image)</div>
           </div>
         </div>
       </div>
