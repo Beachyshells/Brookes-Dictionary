@@ -24,13 +24,17 @@ export default function Results(props) {
         <div className="col">
           <div className="word-header d-flex align-items-center gap-3">
             <h2 className="word fs-2">{props.results.word}</h2>
-            <button
-              className="save-button"
-              onClick={props.onSave}
-              title="Save to study page"
-            >
-              ☑️
-            </button>
+
+            <div>
+              <button
+                className="save-button"
+                onClick={props.onSave}
+                title="Save to study page"
+              >
+                ☑️
+              </button>
+            </div>
+
             <div className="saved-words">
               <button
                 className="collection-toggle-button save-button"

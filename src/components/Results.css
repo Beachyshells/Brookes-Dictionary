@@ -1,7 +1,6 @@
 .word {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-
   color: var(--primary-color);
   margin: 0;
 }
@@ -18,9 +17,7 @@
 .Results .save-button,
 .Results .collection-toggle-button {
   border: none;
-  border-radius: 50%; /* Makes them circular */
-  width: 45px;
-  height: 45px;
+  border-radius: 50%;
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 150ms ease-in-out;
@@ -36,5 +33,5 @@
 }
 
 .my-saved-words {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
