@@ -4,16 +4,20 @@ import Photos from "./Photos";
 import "./Body.css";
 
 export default function Body(props) {
-  console.log("Props received by Body.js:", props);
-  return (
-    <div className="Body">
-      <Photos word={props.results.word} photos={props.photos} />
-      <Dictionary
-        photos={props.photos}
-        results={props.results}
-        onSave={props.onSave}
-        toggleCollection={props.toggleCollection}
-      />
-    </div>
-  );
+  if (!props.results) {
+    return null;
+  } else {
+    console.log("Props received by Body.js:", props);
+    return (
+      <div className="Body">
+        <Photos word={props.results.word} photos={props.photos} />
+        <Dictionary
+          photos={props.photos}
+          results={props.results}
+          onSave={props.onSave}
+          toggleCollection={props.toggleCollection}
+        />
+      </div>
+    );
+  }
 }
